@@ -4,37 +4,32 @@ $.get('Js/les-miserables.gexf', function (xml) {
     myChart.hideLoading();
     var graph = echarts.dataTool.gexf.parse(xml);
     var categories = [];
-    for (var i = 0; i < 9; i++) {
-        categories[i] = {
-            name: '类目' + i
-        };
-    }
     categories[0] = {
-        name: 'Biology'
+        name: 'agriculture'
     };
     categories[1] = {
-        name: 'Physics'
+        name: 'biology'
     };
     categories[2] = {
-        name: 'Medicine'
+        name: 'chemistry'
     };
     categories[3] = {
-        name: 'Biochemistry'
+        name: 'computer science'
     };
     categories[4] = {
-        name: 'Mathematics'
+        name: 'engineering'
     };
     categories[5] = {
-        name: 'Medical diagnostic and treatment technology'
+        name: 'environmental science'
     };
     categories[6] = {
-        name: 'Therapy and rehabilitation'
+        name: 'medicine'
     };
     categories[7] = {
-        name: 'Chemistry'
+        name: 'physical science'
     };
     categories[8] = {
-        name: 'Statistics'
+        name: 'social science'
     };
     graph.nodes.forEach(function (node) {
         node.itemStyle = null;
@@ -44,13 +39,26 @@ $.get('Js/les-miserables.gexf', function (xml) {
             }
         };
         node.category = node.attributes.modularity_class;
+        node.symbol = 'circle';
+        node.emphasis = {
+            itemStyle: {
+                borderColor: "#000",
+                borderWidth: "1"
+            }
+        }
     });
     graph.links.forEach(function (link) {
-        link.value=link.name
-        link.emphasis={
-            label:{show:true,
-            formatter:'{c}'
-        }}
+        link.value = link.name
+        link.width = parseFloat(link.name) * 1000
+        link.emphasis = {
+            lineStyle: {
+                width: 1/(1-parseFloat(link.name))/50,
+            },
+            label: {
+                show: true,
+                formatter: '{c}'
+            }
+        }
     })
     option = {
 
@@ -69,14 +77,14 @@ $.get('Js/les-miserables.gexf', function (xml) {
                 name: '学科',
                 type: 'graph',
                 layout: 'circular',
-                width: 400,
-                height: 400,
+                width: 900,
+                height: 900,
                 focusNodeAdjacency: true,
                 circular: {
                     rotateLabel: true
                 },
                 data: graph.nodes,
-                links:graph.links,
+                links: graph.links,
                 categories: categories,
                 roam: true,
                 label: {
@@ -91,14 +99,10 @@ $.get('Js/les-miserables.gexf', function (xml) {
                         curveness: 0.3
                     }
                 },
-                emphasis: {
-                    lineStyle: {
-                        width: 10
-                    }
-                }
             }
         ]
     };
 
     myChart.setOption(option);
 }, 'xml');
+
