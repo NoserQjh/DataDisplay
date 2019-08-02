@@ -55,7 +55,7 @@ $.get('Js/les-miserables.gexf', function (xml) {
                 width: 1/(1-parseFloat(link.name))/50,
             },
             label: {
-                show: true,
+                show: false,
                 formatter: '{c}'
             }
         }
