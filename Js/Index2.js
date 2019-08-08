@@ -5,31 +5,31 @@ $.get('Js/les-miserables.gexf', function (xml) {
     var graph = echarts.dataTool.gexf.parse(xml);
     var categories = [];
     categories[0] = {
-        name: 'agriculture'
+        name: 'Education'
     };
     categories[1] = {
-        name: 'biology'
+        name: 'Arts and Humanities'
     };
     categories[2] = {
-        name: 'chemistry'
+        name: 'Social Sciences, Journalism and Information'
     };
     categories[3] = {
-        name: 'computer science'
+        name: 'Business, Administration and Law'
     };
     categories[4] = {
-        name: 'engineering'
+        name: 'Natural Sciences, Mathematics and Statistics'
     };
     categories[5] = {
-        name: 'environmental science'
+        name: 'Information and Communication Technologies'
     };
     categories[6] = {
-        name: 'medicine'
+        name: 'Engineering, Manufacturing and Construction'
     };
     categories[7] = {
-        name: 'physical science'
+        name: 'Agriculture, Forestry, Fisheries and Veterinary'
     };
     categories[8] = {
-        name: 'social science'
+        name: 'Health and Welfare'
     };
     graph.nodes.forEach(function (node) {
         node.itemStyle = null;
@@ -52,7 +52,7 @@ $.get('Js/les-miserables.gexf', function (xml) {
         link.width = parseFloat(link.name) * 1000
         link.emphasis = {
             lineStyle: {
-                width: 1/(1-parseFloat(link.name))/50,
+                width: 1/(1-parseFloat(link.name))/30,
             },
             label: {
                 show: false,
