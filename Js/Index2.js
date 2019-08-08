@@ -48,17 +48,36 @@ $.get('Js/les-miserables.gexf', function (xml) {
         }
     });
     graph.links.forEach(function (link) {
-        link.value = link.name
-        link.width = parseFloat(link.name) * 1000
-        link.emphasis = {
-            lineStyle: {
-                width: 1/(1-parseFloat(link.name))/30,
-            },
-            label: {
-                show: false,
-                formatter: '{c}'
+        if (link.name == "-1") {
+            link.value = link.name
+            link.width = 10
+            link.lineStyle = { curveness: -0.1 }
+            link.emphasis = {
+                lineStyle: {
+                    width: 1,
+                },
+                label: {
+                    show: false,
+                    formatter: '{c}'
+                }
+            }
+
+        }
+        else {
+            link.value = link.name
+            link.width = parseFloat(link.name) * 1000
+            link.lineStyle = { color: 'source', curveness: 0.3 }
+            link.emphasis = {
+                lineStyle: {
+                    width: 1 / (1 - parseFloat(link.name)) / 30,
+                },
+                label: {
+                    show: false,
+                    formatter: '{c}'
+                }
             }
         }
+
     })
     option = {
 
@@ -77,6 +96,7 @@ $.get('Js/les-miserables.gexf', function (xml) {
                 name: '学科',
                 type: 'graph',
                 layout: 'circular',
+                roam: true,
                 width: 900,
                 height: 900,
                 focusNodeAdjacency: true,
@@ -92,12 +112,6 @@ $.get('Js/les-miserables.gexf', function (xml) {
                         position: 'right',
                         formatter: '{b}'
                     },
-                },
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.3
-                    }
                 },
             }
         ]
