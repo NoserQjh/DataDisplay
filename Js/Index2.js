@@ -50,7 +50,7 @@ $.get('Js/les-miserables.gexf', function (xml) {
     graph.links.forEach(function (link) {
         if (link.name == "-1") {
             link.value = link.name
-            link.width = 10
+            link.width = 100
             link.lineStyle = { curveness: -0.1 }
             link.emphasis = {
                 lineStyle: {
