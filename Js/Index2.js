@@ -1,122 +1,821 @@
-var myChart = echarts.init(document.getElementById('main'));
-myChart.showLoading();
-$.get('Js/les-miserables.gexf', function (xml) {
-    myChart.hideLoading();
-    var graph = echarts.dataTool.gexf.parse(xml);
-    var categories = [];
-    categories[0] = {
-        name: 'Education'
-    };
-    categories[1] = {
-        name: 'Arts and Humanities'
-    };
-    categories[2] = {
-        name: 'Social Sciences, Journalism and Information'
-    };
-    categories[3] = {
-        name: 'Business, Administration and Law'
-    };
-    categories[4] = {
-        name: 'Natural Sciences, Mathematics and Statistics'
-    };
-    categories[5] = {
-        name: 'Information and Communication Technologies'
-    };
-    categories[6] = {
-        name: 'Engineering, Manufacturing and Construction'
-    };
-    categories[7] = {
-        name: 'Agriculture, Forestry, Fisheries and Veterinary'
-    };
-    categories[8] = {
-        name: 'Health and Welfare'
-    };
-    graph.nodes.forEach(function (node) {
-        node.itemStyle = null;
-        node.label = {
-            normal: {
-                show: node.symbolSize > 10
-            }
-        };
-        node.category = node.attributes.modularity_class;
-        node.symbol = 'circle';
-        node.emphasis = {
-            itemStyle: {
-                borderColor: "#000",
-                borderWidth: "1"
-            }
-        }
-    });
-    graph.links.forEach(function (link) {
-        if (link.name == "-1") {
-            link.value = link.name
-            link.width = 100
-            link.lineStyle = { curveness: -0.1 }
-            link.emphasis = {
-                lineStyle: {
-                    width: 1,
-                },
-                label: {
-                    show: false,
-                    formatter: '{c}'
-                }
-            }
+/*
+ * @Author: NoserQJH
+ * @LastEditors: NoserQJH
+ * @Date: 2019-06-26 20:10:27
+ * @LastEditTime: 2019-08-28 11:02:37
+ * @Description:
+ */
+$.getJSON('Js/Json/NumberOfPublication.json', function (data) {
+    var myChart = echarts.init(document.getElementById('NumberOfPublication'));
+    var xAxisData = [];
+    var data1 = [];
+    var data2 = [];
 
-        }
-        else {
-            link.value = link.name
-            link.width = parseFloat(link.name) * 1000
-            link.lineStyle = { color: 'source', curveness: 0.3 }
-            link.emphasis = {
-                lineStyle: {
-                    width: 1 / (1 - parseFloat(link.name)) / 30,
-                },
-                label: {
-                    show: false,
-                    formatter: '{c}'
-                }
-            }
-        }
-
-    })
     option = {
-
-        tooltip: {},
-        legend: [{
-            // selectedMode: 'single',
-            data: categories.map(function (a) {
-                return a.name;
-            }),
-            bottom: 0
-        }],
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series: [
-            {
-                name: '学科',
-                type: 'graph',
-                layout: 'circular',
-                roam: true,
-                width: 900,
-                height: 900,
-                focusNodeAdjacency: true,
-                circular: {
-                    rotateLabel: true
+        title: {
+            text: 'Number of Publication',
+            left: 'center'
+        },
+        toolbox: {
+            y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
                 },
-                data: graph.nodes,
-                links: graph.links,
-                categories: categories,
-                roam: true,
-                label: {
-                    normal: {
-                        position: 'right',
-                        formatter: '{b}'
-                    },
-                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
             }
-        ]
+        },
+        tooltip: {},
+        xAxis: {
+            data: data.year,
+            silent: false,
+            splitLine: {
+                show: false
+            },
+            axisPointer: {
+                show: true,
+                type: 'shadow'
+            }
+        },
+        yAxis: {
+
+        },
+
+
+        series: [{
+            name: 'Number Of Publication',
+            data: data.pub,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
     };
-
     myChart.setOption(option);
-}, 'xml');
+});
 
+$.getJSON('Js/Json/data2.json', function (data) {
+    var myChart = echarts.init(document.getElementById('FameOfFamousMathmaticians'));
+    var xAxisData = [];
+    var data1 = [];
+    var data2 = [];
+    for (var i = 0; i < 100; i++) {
+        xAxisData.push('类目' + i);
+        data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+        data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+    }
+
+    option = {
+        title: {
+            text: 'Fame Of Famous Mathmaticians',
+            left: 'center'
+        },
+        legend: {
+            type: 'scroll',
+            data: ["KarlPearson",
+                "NorbertWiener",
+                "JohnvonNeumann",
+                "HenriPoincare",
+                "SimonNewcomb",
+                "BenjaminPeirce",
+                "WarrenWeaver",
+                "GeorgeHowardDarwin",
+                "WilliamRowanHamilton",
+                "FriedrichLudwigGottlobFrege",
+                "ChristianFelixKlein",
+                "GeorgeBoole",
+                "FrederickMosteller",
+                "OliverHeaviside",
+                "ClaudeElwoodShannon",
+                "HermannWeyl",
+                "KurtGdel",
+                "GeorgFerdinandLudwigPhilippCantor",
+                "FreemanJohnDyson",
+                "DavidHilbert",
+                "HaroldJeffreys",
+                "AlfredTarski",
+                "AugustusDeMorgan",
+                "FlorianCajori",
+                "RogerPenrose",
+                "GeorgeUdnyYule",
+                "RichardEBellman"],
+            align: 'left',
+            top: 25
+        },
+        toolbox: {
+            y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
+                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
+            }
+        },
+        tooltip: {},
+        xAxis: {
+            data: data.Year,
+            silent: false,
+            splitLine: {
+                show: false
+            },
+            axisPointer: {
+                show: true,
+                type: 'shadow'
+            }
+
+        },
+        yAxis: {
+
+            axisPointer: {
+                show: false
+            }
+        },
+
+
+        series: [{
+            name: 'KarlPearson',
+            data: data.KarlPearson,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 1 }
+        },
+        {
+            name: 'NorbertWiener',
+            data: data.NorbertWiener,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 1 }
+        },
+        {
+            name: 'JohnvonNeumann',
+            data: data.JohnvonNeumann,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        },
+        {
+            name: 'HenriPoincare',
+            data: data.HenriPoincare,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'SimonNewcomb',
+            data: data.SimonNewcomb,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'BenjaminPeirce',
+            data: data.BenjaminPeirce,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'WarrenWeaver',
+            data: data.WarrenWeaver,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'GeorgeHowardDarwin',
+            data: data.GeorgeHowardDarwin,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'WilliamRowanHamilton',
+            data: data.WilliamRowanHamilton,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'FriedrichLudwigGottlobFrege',
+            data: data.FriedrichLudwigGottlobFrege,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'ChristianFelixKlein',
+            data: data.ChristianFelixKlein,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'GeorgeBoole',
+            data: data.GeorgeBoole,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'FrederickMosteller',
+            data: data.FrederickMosteller,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'OliverHeaviside',
+            data: data.OliverHeaviside,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'ClaudeElwoodShannon',
+            data: data.ClaudeElwoodShannon,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'HermannWeyl',
+            data: data.HermannWeyl,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'KurtGdel',
+            data: data.KurtGdel,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'GeorgFerdinandLudwigPhilippCantor',
+            data: data.GeorgFerdinandLudwigPhilippCantor,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'FreemanJohnDyson',
+            data: data.FreemanJohnDyson,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'DavidHilbert',
+            data: data.DavidHilbert,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'HaroldJeffreys',
+            data: data.HaroldJeffreys,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'AlfredTarski',
+            data: data.AlfredTarski,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'AugustusDeMorgan',
+            data: data.AugustusDeMorgan,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'FlorianCajori',
+            data: data.FlorianCajori,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'RogerPenrose',
+            data: data.RogerPenrose,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'GeorgeUdnyYule',
+            data: data.GeorgeUdnyYule,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'RichardEBellman',
+            data: data.RichardEBellman,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
+    myChart.setOption(option);
+});
+
+$.getJSON('Js/Json/data1.json', function (data) {
+    var myChart = echarts.init(document.getElementById('FoundersOfMolecularBiology'));
+    var xAxisData = [];
+    var data1 = [];
+    var data2 = [];
+    for (var i = 0; i < 100; i++) {
+        xAxisData.push('类目' + i);
+        data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+        data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+    }
+
+    option = {
+        title: {
+            text: 'Founders Of Molecular Biology',
+            left: 'center'
+        },
+        legend: {
+            data: ["WarrenWeaver",
+                "ErwinChargaff",
+                "WilliamThomasAstbury",
+                "WilliamKeithBrooks",
+                "JamesDeweyWatson",
+                "FrancisHarryComptonCrick",
+                "OswaldTheodoreAvery",
+                "JacquesLucienMonod",
+                "LinusCarlPauling",
+                "JerryDonohue"],
+            align: 'left',
+            top: 25
+        },
+        toolbox: {
+            y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
+                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
+            }
+        },
+        tooltip: {},
+        xAxis: {
+            data: data.Year,
+            silent: false,
+            splitLine: {
+                show: false
+            },
+            axisPointer: {
+                show: true,
+                type: 'shadow'
+            }
+        },
+        yAxis: {
+
+        },
+
+
+        series: [{
+            name: 'WarrenWeaver',
+            data: data.WarrenWeaver,
+            markLine: {
+                label: {
+                    formatter: "1"
+                },
+                data: [{
+                    xAxis: '1939',
+                },],
+                animationDelay: 5000,
+                type: 'dotted'
+            },
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 1 }
+        }, {
+            name: 'ErwinChargaff',
+            data: data.ErwinChargaff,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 1 }
+        },
+        {
+            name: 'WilliamThomasAstbury',
+            data: data.WilliamThomasAstbury,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        },
+        {
+            name: 'WilliamKeithBrooks',
+            data: data.WilliamKeithBrooks,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        },
+        {
+            name: 'JamesDeweyWatson',
+            data: data.JamesDeweyWatson,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'FrancisHarryComptonCrick',
+            data: data.FrancisHarryComptonCrick,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'OswaldTheodoreAvery',
+            data: data.OswaldTheodoreAvery,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'JacquesLucienMonod',
+            data: data.JacquesLucienMonod,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'LinusCarlPauling',
+            data: data.LinusCarlPauling,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'JerryDonohue',
+            data: data.JerryDonohue,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
+    myChart.setOption(option);
+});
+
+$.getJSON('Js/Json/NameOfMolecuarBiology.json', function (data) {
+    var myChart = echarts.init(document.getElementById('NameOfMolecularBiology'));
+    var xAxisData = [];
+    var data1 = [];
+    var data2 = [];
+
+    option = {
+        title: {
+            text: 'Name Of Molecular Biology',
+            left: 'center'
+        },
+        legend: {
+            data: ["molecularbiology_All",
+                "molecularbiology",
+                "MolecularBiology",
+                "Molecularbiology",
+                "MOLECULARBIOLOGY",],
+            align: 'left',
+            top: 25
+        },
+        toolbox: {
+            y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
+                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
+            }
+        },
+        tooltip: {},
+        xAxis: {
+            data: data.year,
+            silent: false,
+            splitLine: {
+                show: false
+            },
+            axisPointer: {
+                show: true,
+                type: 'shadow'
+            }
+        },
+        yAxis: {
+
+        },
+
+
+        series: [{
+            name: 'molecularbiology_All',
+            data: data.molecularbiology_All,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'molecularbiology',
+            data: data.molecularbiology,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'MolecularBiology',
+            data: data.MolecularBiology,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'Molecularbiology',
+            data: data.Molecularbiology,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'MOLECULARBIOLOGY',
+            data: data.MOLECULARBIOLOGY,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
+    myChart.setOption(option);
+});
+
+$.getJSON('Js/Json/MolecularBiologyRelatedIst.json', function (data) {
+    var myChart = echarts.init(document.getElementById('MolecularBiologyRelatedIst'));
+    var xAxisData = [];
+    var data1 = [];
+    var data2 = [];
+
+    option = {
+        title: {
+            text: 'Molecular Biology Related -ist',
+            left: 'center'
+        },
+        legend: {
+            type: 'scroll',
+            data: [
+                "molecularbiologist",
+                "physicist",
+                "cytologist",
+                "geneticist",
+                "biochemist",
+                "cellbiologist",
+                "immunologist",
+                "microbiologist",
+                "geneticengineer",
+                "biotechnologist",
+                "moleculargeneticist",
+                "medicalscientist",
+                "cellphysiologist",
+                "developmentalbiologist",
+                "structuralbiologist"],
+            align: 'left',
+            top: 25
+        },
+        toolbox: {
+            y: 'bottom',
+            feature: {
+                magicType: {
+                    type: ['stack', 'tiled']
+                },
+                dataView: {},
+                saveAsImage: {
+                    pixelRatio: 2
+                }
+            }
+        },
+        tooltip: {},
+        xAxis: {
+            data: data.Year,
+            silent: false,
+            splitLine: {
+                show: false
+            },
+            axisPointer: {
+                show: true,
+                type: 'shadow'
+            }
+        },
+        yAxis: {
+
+        },
+
+
+        series: [{
+            name: 'molecularbiologist',
+            data: data.molecularbiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'physicist',
+            data: data.physicist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'cytologist',
+            data: data.cytologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'geneticist',
+            data: data.geneticist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'biochemist',
+            data: data.biochemist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'cellbiologist',
+            data: data.cellbiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'immunologist',
+            data: data.immunologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'microbiologist',
+            data: data.microbiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'geneticengineer',
+            data: data.geneticengineer,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'biotechnologist',
+            data: data.biotechnologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'moleculargeneticist',
+            data: data.moleculargeneticist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'medicalscientist',
+            data: data.medicalscientist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'cellphysiologist',
+            data: data.cellphysiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'developmentalbiologist',
+            data: data.developmentalbiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }, {
+            name: 'structuralbiologist',
+            data: data.structuralbiologist,
+            type: 'line',
+            showSymbol: false,
+            animationDuration: 5000,
+            areaStyle: { opacity: 0.1 },
+            lineStyle: { opacity: 0.5 }
+        }],
+        animationEasing: 'elasticOut',
+        animationDelayUpdate: function (idx) {
+            return idx * 5;
+        }
+    };
+    myChart.setOption(option);
+});

@@ -44,7 +44,7 @@ body {
 .selected_index {
     text-decoration:none;
     float:left;
-    width:100px;
+    width:150px;
     height:18px;
     padding:6px;
     border-top-left-radius:5px;
@@ -62,7 +62,7 @@ body {
 .unselected_index {
     text-decoration:none;
     float:left;
-    width:100px;
+    width:150px;
     height:18px;
     padding:6px;
     border-top-left-radius:5px;

@@ -1,0 +1,1082 @@
+[{
+    "name": "H.Acoustics",
+    "size": 1,
+    "imports": {
+        "G.Mathematics": 0.05279533738141688,
+        "F.Physics": 0.10330726592934442,
+        "C.Psychology": 0.07631823338377658
+    }
+}, {
+    "name": "D.Agricultural botany",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "D.Agricultural chemistry",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "D.Agriculture",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.21118775264939618,
+        "J.Biotechnology": 0.050199441186676054,
+        "H.Civil engineering": 0.10853817687607234,
+        "C.Ecology": 0.19092448308345575,
+        "L.Economics": 0.5913375163870497,
+        "D.Food science": 0.05338924235316293,
+        "D.Forestry": 0.25674750188327716,
+        "C.Genetic engineering": 0.07806048995371859,
+        "C.Genetics": 0.19089280304736775,
+        "G.Mathematics": 0.1357053736562317,
+        "H.Mechanical engineering": 0.09887558649449135,
+        "F.Physics": 0.09256697881916236,
+        "B.physiology": 0.06553235467236541,
+        "C.Psychology": 0.4136114152185719,
+        "L.Sociology": 0.21257020390793413
+    }
+}, {
+    "name": "B.Anatomy",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "Q.Applied linguistics",
+    "size": 1,
+    "imports": {
+        "Q.Sociolinguistics": 0.2914473685551943,
+        "Q.Linguistics": 0.7642746227371525,
+        "C.Psychology": 0.056397408308951215
+    }
+}, {
+    "name": "L.Applied sociology",
+    "size": 1,
+    "imports": {
+        "L.Sociology": 0.058974332285581674
+    }
+}, {
+    "name": "I.Artificial intelligence",
+    "size": 1,
+    "imports": {
+        "J.Biotechnology": 1.3358906077023003,
+        "I.Computer science": 0.7619888529179125,
+        "C.Genetic engineering": 0.8205323548926535,
+        "Q.Linguistics": 0.18342944817730703,
+        "I.Machine learning": 0.23759288469521064,
+        "B.Neuroscience": 1.8638543159719816,
+        "C.Psychology": 0.0509131523209184,
+        "C.Biology": 0.11000641187775109,
+        "F.Physics": 0.06519944046774412,
+        "L.Sociology": 0.05842374246320513
+    }
+}, {
+    "name": "F.Astronomy",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.05101712271982543,
+        "L.Sociology": 0.05568404581461534
+    }
+}, {
+    "name": "F.Astrophysics",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.37617154958363197,
+        "C.Biology": 0.5626278762091321,
+        "G.Mathematics": 0.05015123875149936,
+        "F.Physics": 0.18544003992463487
+    }
+}, {
+    "name": "C.biochemistry",
+    "size": 1,
+    "imports": {
+        "F.Astrophysics": 0.37617154958363197,
+        "H.Bioengineering": 0.38565252095795727,
+        "C.Biology": 0.4405315064694063,
+        "J.Biotechnology": 0.2851496497957396,
+        "C.Cell biology": 0.19315341152963722,
+        "A.Clinical medicine": 0.09145526982766308,
+        "C.Ecology": 0.9491459207754742,
+        "C.Genetic engineering": 0.18152150392248909,
+        "C.Genetics": 0.5905072851767914,
+        "C.Immunology": 0.7396455442430859,
+        "G.Mathematics": 0.0954325736241724,
+        "A.Medicine": 0.22002791234536834,
+        "C.Microbiology": 2.3588592610734076,
+        "C.Molecular genetics": 0.21802481232113805,
+        "B.Neuroscience": 0.13370917738889465,
+        "F.Organic chemistry": 0.050901777812398186,
+        "B.Pharmacology": 0.7314616032135381,
+        "F.Physical chemistry": 0.25967910249808956,
+        "F.Physics": 0.5547378899784401,
+        "B.physiology": 0.05784108081725409,
+        "C.Psychology": 0.1819587434627711,
+        "C.Virology": 1.057459737542195,
+        "C.Molecular biology": 0.2717198121949156
+    }
+}, {
+    "name": "H.Bioengineering",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.38565252095795727,
+        "J.Biotechnology": 0.5116840983942849,
+        "C.Biology": 0.2119010340745833,
+        "C.Genetics": 0.5651931630748755,
+        "A.Medicine": 0.18605446082913318
+    }
+}, {
+    "name": "C.Biology",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.21118775264939618,
+        "F.Astrophysics": 0.5626278762091321,
+        "C.biochemistry": 0.4405315064694063,
+        "I.Artificial intelligence": 0.11000641187775109,
+        "H.Bioengineering": 0.2119010340745833,
+        "J.Biotechnology": 0.24045084806156353,
+        "C.Cell biology": 0.12178924189455109,
+        "F.Climatology": 0.13901743772406167,
+        "A.Clinical medicine": 0.09954741427792203,
+        "I.Computer science": 0.12288149460074908,
+        "F.Earth science": 0.2546446269860904,
+        "C.Ecology": 0.97090383002753,
+        "L.Economics": 4.104228032186101,
+        "H.Electrical engineering": 0.09101914681126212,
+        "D.Food science": 0.24473074562504696,
+        "D.Forestry": 0.12601041563549215,
+        "C.Genetic engineering": 0.29383074363993067,
+        "C.Genomics": 0.06090103156379662,
+        "C.Human genetics": 0.19855109765157178,
+        "C.Immunology": 0.68535400261442,
+        "Q.Linguistics": 0.9685121317239037,
+        "F.Materials science": 0.11104604678237108,
+        "G.Mathematics": 0.1670561919080307,
+        "F.Medicinal chemistry": 0.15068595290327017,
+        "A.Medicine": 0.5432368924307417,
+        "C.Microbiology": 1.4328897693068792,
+        "C.Molecular genetics": 0.13455595606654394,
+        "B.Neuroscience": 0.11628362627370672,
+        "F.Organic chemistry": 0.060573938962211325,
+        "B.Pharmacology": 0.7120076556308739,
+        "F.Physical chemistry": 0.1187310510335017,
+        "F.Physics": 0.301032808109318,
+        "B.physiology": 0.06124250510863079,
+        "C.Psychology": 0.9323056390400016,
+        "B.Radiology": 0.5690506360269866,
+        "L.Social theory": 0.4954409731757622,
+        "L.Sociology": 1.6063339671616632,
+        "C.Virology": 0.18245794363702017,
+        "C.Genetics": 0.6525827494446029
+    }
+}, {
+    "name": "C.Biophysical science",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "J.Biotechnology",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.050199441186676054,
+        "I.Artificial intelligence": 1.3358906077023003,
+        "C.biochemistry": 0.2851496497957396,
+        "H.Bioengineering": 0.5116840983942849,
+        "C.Biology": 0.24045084806156353,
+        "I.Computer science": 0.5390424088115867,
+        "C.Ecology": 0.8307404953395168,
+        "C.Genetic engineering": 2.254442602020089,
+        "C.Genetics": 0.32310734971757094,
+        "C.Genomics": 0.222216645384718,
+        "C.Immunology": 0.7827749945160097,
+        "F.Materials science": 0.11335018329642046,
+        "A.Medicine": 0.13731368072224379,
+        "C.Microbiology": 0.6862059716872421,
+        "C.Molecular genetics": 3.985575881439976,
+        "B.Pharmacology": 0.5769163482048686,
+        "C.Molecular biology": 2.262928770153423,
+        "C.Cell biology": 1.0623576373446566,
+        "D.Food science": 0.2151302729743702,
+        "C.Human genetics": 0.14335100863746597,
+        "F.Physics": 0.06527761484150722
+    }
+}, {
+    "name": "C.Cell biology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.19315341152963722,
+        "C.Biology": 0.12178924189455109,
+        "J.Biotechnology": 1.0623576373446566,
+        "C.Ecology": 0.8304022659972996,
+        "C.Immunology": 0.8604382566144645,
+        "A.Medicine": 0.1451276884280478,
+        "C.Microbiology": 0.9859156532242582,
+        "C.Molecular genetics": 0.7223608755365416,
+        "B.Pharmacology": 0.36672635707272555,
+        "C.Virology": 0.4762547177285129,
+        "C.Molecular biology": 1.1092608457573512,
+        "C.Genetics": 0.19354894007733417
+    }
+}, {
+    "name": "F.Chemical physics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "F.Chemistry",
+    "size": 1,
+    "imports": {
+        "H.Civil engineering": 0.05806525737090969,
+        "F.Geology": 0.05098147749055191,
+        "G.Mathematics": 0.057683747579469896,
+        "H.Mechanics": 0.05782485359335366,
+        "V.Metaphysics": 0.0531782480580813,
+        "F.Organic chemistry": 0.07953340489237087,
+        "B.Pathology": 0.06632760856136931,
+        "B.physiology": 0.2082558990812256
+    }
+}, {
+    "name": "H.Civil engineering",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.10853817687607234,
+        "F.Chemistry": 0.05806525737090969,
+        "H.Electrical engineering": 0.2765078189025014,
+        "G.Mathematics": 0.09527135686601836,
+        "H.Mechanical engineering": 0.47143270910347757,
+        "F.Physics": 0.22909235682372564
+    }
+}, {
+    "name": "F.Climatology",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.13901743772406167,
+        "C.Ecology": 0.07762518643459178,
+        "F.Physics": 0.14926781762945013
+    }
+}, {
+    "name": "A.Clinical medicine",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.09145526982766308,
+        "C.Biology": 0.09954741427792203,
+        "B.Pharmacology": 0.13632056979743484,
+        "C.Psychology": 0.06789929656493338,
+        "C.Genetics": 0.09027803655557262,
+        "A.Medicine": 0.071274336997485
+    }
+}, {
+    "name": "H.Communications engineering",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "G.Computational mathematics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "I.Computer science",
+    "size": 1,
+    "imports": {
+        "I.Artificial intelligence": 0.7619888529179125,
+        "C.Biology": 0.12288149460074908,
+        "J.Biotechnology": 0.5390424088115867,
+        "L.Economics": 0.08084164997418235,
+        "H.Electrical engineering": 0.07716280757846933,
+        "H.Electronic engineering": 0.05249561513376037,
+        "Q.Linguistics": 0.24197142755689044,
+        "A.Medicine": 0.07175343756153706,
+        "B.Neuroscience": 0.5501688538603424,
+        "G.Numerical analysis": 0.4060412766816466,
+        "F.Physics": 0.07894432793876038,
+        "C.Psychology": 0.06364336541424634,
+        "L.Sociology": 0.09061510078955727,
+        "C.Molecular biology": 0.6435139606270665,
+        "C.Genetics": 0.1005365259059019,
+        "H.Mechanical engineering": 0.1076001603705734
+    }
+}, {
+    "name": "F.Earth science",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.2546446269860904,
+        "F.Physics": 0.09452712250596047
+    }
+}, {
+    "name": "C.Ecology",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.19092448308345575,
+        "C.biochemistry": 0.9491459207754742,
+        "C.Biology": 0.97090383002753,
+        "J.Biotechnology": 0.8307404953395168,
+        "C.Cell biology": 0.8304022659972996,
+        "F.Climatology": 0.07762518643459178,
+        "L.Economics": 4.253851787967599,
+        "C.Environmental biology": 0.23456289541223962,
+        "D.Forestry": 0.06304049791930594,
+        "G.Mathematics": 0.08990949644259441,
+        "A.Medicine": 0.4470136271171405,
+        "C.Microbiology": 4.991449527508251,
+        "F.Physics": 0.14712957578753946,
+        "C.Psychology": 0.6450485346788559,
+        "L.Social theory": 2.5568444302716626,
+        "L.Sociology": 0.9664115075616868,
+        "C.Molecular biology": 1.086495428949054,
+        "C.Genetics": 2.7492899362039913
+    }
+}, {
+    "name": "L.Econometrics",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.24294052046609227,
+        "L.Macroeconomics": 4.081430386661965,
+        "G.Mathematical statistics": 0.09250844243723404,
+        "L.Microeconomics": 4.005601438706817
+    }
+}, {
+    "name": "L.Economics",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.5913375163870497,
+        "F.Astronomy": 0.05101712271982543,
+        "C.Biology": 4.104228032186101,
+        "I.Computer science": 0.08084164997418235,
+        "C.Ecology": 4.253851787967599,
+        "L.Econometrics": 0.24294052046609227,
+        "D.Forestry": 0.2581885583729493,
+        "C.Genetics": 0.9883541224505424,
+        "L.International economics": 0.3505733987656903,
+        "L.International politics": 0.9792413045572875,
+        "L.International relations": 0.23153385156014075,
+        "Q.Linguistics": 0.516805511963053,
+        "L.Macroeconomics": 0.13694225206010896,
+        "G.Mathematical statistics": 0.15149025795749851,
+        "G.Mathematics": 0.26712920392171446,
+        "A.Medicine": 0.14758713265690382,
+        "L.Microeconomics": 0.1995455440730171,
+        "F.Physics": 0.36607157347170827,
+        "B.physiology": 0.050464074255836176,
+        "L.Political sociology": 0.3335644592931814,
+        "C.Psychology": 1.3054160090940783,
+        "V.Social philosophy": 0.09459375151894907,
+        "L.Social theory": 1.2692010609593602,
+        "L.Sociology": 3.3819911435087358,
+        "H.Electrical engineering": 0.19324794684243085,
+        "H.Mechanical engineering": 0.43006597628263743
+    }
+}, {
+    "name": "H.Electrical engineering",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.09101914681126212,
+        "H.Civil engineering": 0.2765078189025014,
+        "I.Computer science": 0.07716280757846933,
+        "L.Economics": 0.19324794684243085,
+        "F.Materials science": 0.07481850016690866,
+        "G.Mathematics": 0.053770711564915905,
+        "H.Mechanical engineering": 0.27200343933546534,
+        "F.Physics": 0.1697129320682533,
+        "C.Psychology": 0.13938022588712481
+    }
+}, {
+    "name": "H.Electronic engineering",
+    "size": 1,
+    "imports": {
+        "I.Computer science": 0.05249561513376037,
+        "F.Physics": 0.0716871185361793
+    }
+}, {
+    "name": "C.Environmental biology",
+    "size": 1,
+    "imports": {
+        "C.Ecology": 0.23456289541223962
+    }
+}, {
+    "name": "H.Environmental engineering",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "D.Food science",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.05338924235316293,
+        "C.Biology": 0.24473074562504696,
+        "J.Biotechnology": 0.2151302729743702,
+        "C.Microbiology": 0.5620474184847928
+    }
+}, {
+    "name": "D.Forestry",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.25674750188327716,
+        "C.Biology": 0.12601041563549215,
+        "C.Ecology": 0.06304049791930594,
+        "L.Economics": 0.2581885583729493
+    }
+}, {
+    "name": "C.Genetic engineering",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.07806048995371859,
+        "I.Artificial intelligence": 0.8205323548926535,
+        "C.biochemistry": 0.18152150392248909,
+        "C.Biology": 0.29383074363993067,
+        "J.Biotechnology": 2.254442602020089,
+        "C.Molecular biology": 1.2552138755659794,
+        "C.Genetics": 0.32706039673841547,
+        "C.Genomics": 0.2408691354354976,
+        "C.Immunology": 0.8228372783362649,
+        "A.Medicine": 0.19110472413340424,
+        "C.Microbiology": 0.7625474715763078,
+        "C.Molecular genetics": 1.4672472835838237,
+        "F.Physics": 0.05937544305084875
+    }
+}, {
+    "name": "C.Genetics",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.19089280304736775,
+        "C.biochemistry": 0.5905072851767914,
+        "J.Biotechnology": 0.32310734971757094,
+        "L.Economics": 0.9883541224505424,
+        "H.Bioengineering": 0.5651931630748755,
+        "C.Biology": 0.6525827494446029,
+        "C.Cell biology": 0.19354894007733417,
+        "A.Clinical medicine": 0.09027803655557262,
+        "I.Computer science": 0.1005365259059019,
+        "C.Ecology": 2.7492899362039913,
+        "C.Genetic engineering": 0.32706039673841547,
+        "C.Human genetics": 0.5939998648204192,
+        "C.Immunology": 0.2693447607433135,
+        "Q.Linguistics": 1.1103007768925506,
+        "G.Mathematics": 0.08931575645252882,
+        "A.Medicine": 0.24653091755569867,
+        "C.Microbiology": 1.1345775051496236,
+        "C.Molecular genetics": 0.22643659962711177,
+        "B.Neuroscience": 0.10692917797224302,
+        "B.Pharmacology": 0.22969322874705955,
+        "F.Physics": 0.1870305223242155,
+        "C.Psychology": 0.47618236426234545,
+        "L.Sociology": 1.0186120394342846,
+        "C.Virology": 0.24521253091270276,
+        "C.Molecular biology": 0.27581141715960283
+    }
+}, {
+    "name": "C.Genomics",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.06090103156379662,
+        "J.Biotechnology": 0.222216645384718,
+        "C.Genetic engineering": 0.2408691354354976,
+        "C.Molecular biology": 0.2530408649148082,
+        "C.Molecular genetics": 0.26301495356021143
+    }
+}, {
+    "name": "F.Geology",
+    "size": 1,
+    "imports": {
+        "F.Chemistry": 0.05098147749055191,
+        "H.Mechanics": 0.05891529618209077,
+        "B.physiology": 0.09396521877747796
+    }
+}, {
+    "name": "Q.Historical linguistics",
+    "size": 1,
+    "imports": {
+        "Q.Sociolinguistics": 0.7153795125602314,
+        "Q.Linguistics": 1.7609772428105677
+    }
+}, {
+    "name": "C.Human genetics",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.19855109765157178,
+        "C.Genetics": 0.5939998648204192,
+        "J.Biotechnology": 0.14335100863746597,
+        "A.Medicine": 0.13651179138829891,
+        "C.Molecular biology": 0.20613254206974674
+    }
+}, {
+    "name": "F.Hydrography",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "C.Immunology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.7396455442430859,
+        "C.Biology": 0.68535400261442,
+        "J.Biotechnology": 0.7827749945160097,
+        "C.Cell biology": 0.8604382566144645,
+        "C.Genetics": 0.2693447607433135,
+        "C.Genetic engineering": 0.8228372783362649,
+        "A.Medicine": 0.13973808261172022,
+        "C.Microbiology": 1.9794894695650702,
+        "C.Molecular genetics": 0.7961731161125409,
+        "B.Neuroscience": 0.6928420075865717,
+        "B.Pharmacology": 1.458345150866362,
+        "C.Virology": 1.1076327703836915,
+        "C.Molecular biology": 1.2786976537167656
+    }
+}, {
+    "name": "F.Inorganic chemistry",
+    "size": 1,
+    "imports": {
+        "F.Organic chemistry": 0.06710211979130197,
+        "F.Physical chemistry": 0.056000972972468255,
+        "F.Physics": 0.05328434849098568
+    }
+}, {
+    "name": "L.International economics",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.3505733987656903,
+        "L.International politics": 0.18514083399245934,
+        "L.International relations": 0.08867098883540095,
+        "L.Macroeconomics": 0.14189987735652893
+    }
+}, {
+    "name": "L.International politics",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.9792413045572875,
+        "L.International economics": 0.18514083399245934,
+        "L.International relations": 0.10108203919155201
+    }
+}, {
+    "name": "L.International relations",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.23153385156014075,
+        "L.International economics": 0.08867098883540095,
+        "L.International politics": 0.10108203919155201,
+        "L.Sociology": 0.18402706224995807,
+        "C.Psychology": 0.14958773628562616,
+        "L.Social theory": 0.057866901783468504
+    }
+}, {
+    "name": "Q.Linguistics",
+    "size": 1,
+    "imports": {
+        "I.Artificial intelligence": 0.18342944817730703,
+        "C.Biology": 0.9685121317239037,
+        "I.Computer science": 0.24197142755689044,
+        "L.Economics": 0.516805511963053,
+        "C.Genetics": 1.1103007768925506,
+        "Q.Applied linguistics": 0.7642746227371525,
+        "Q.Historical linguistics": 1.7609772428105677,
+        "G.Mathematics": 0.057095977143261416,
+        "A.Medicine": 0.7048190811264857,
+        "B.Neuroscience": 0.2267521610157585,
+        "F.Physics": 0.23459557117788574,
+        "L.Social theory": 0.5301881400667837,
+        "Q.Sociolinguistics": 1.5688503172095052,
+        "L.Sociology": 0.7493544781344964,
+        "C.Psychology": 0.167076686828315
+    }
+}, {
+    "name": "I.Machine learning",
+    "size": 1,
+    "imports": {
+        "I.Artificial intelligence": 0.23759288469521064
+    }
+}, {
+    "name": "L.Macroeconomics",
+    "size": 1,
+    "imports": {
+        "L.Econometrics": 4.081430386661965,
+        "L.Economics": 0.13694225206010896,
+        "L.International economics": 0.14189987735652893,
+        "L.Microeconomics": 6.743024298664485
+    }
+}, {
+    "name": "F.Materials science",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.11104604678237108,
+        "J.Biotechnology": 0.11335018329642046,
+        "H.Electrical engineering": 0.07481850016690866,
+        "F.Physics": 0.07785875314514974,
+        "H.Mechanical engineering": 0.1261543973726633
+    }
+}, {
+    "name": "F.Mathematical physics",
+    "size": 1,
+    "imports": {
+        "G.Mathematics": 0.07930580491107293,
+        "F.Physical chemistry": 0.07856122067497989,
+        "F.Physics": 0.07919881769924003
+    }
+}, {
+    "name": "G.Mathematical statistics",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.15149025795749851,
+        "L.Econometrics": 0.09250844243723404
+    }
+}, {
+    "name": "G.Mathematics",
+    "size": 1,
+    "imports": {
+        "H.Acoustics": 0.05279533738141688,
+        "D.Agriculture": 0.1357053736562317,
+        "F.Astrophysics": 0.05015123875149936,
+        "C.biochemistry": 0.0954325736241724,
+        "C.Biology": 0.1670561919080307,
+        "F.Chemistry": 0.057683747579469896,
+        "H.Civil engineering": 0.09527135686601836,
+        "C.Ecology": 0.08990949644259441,
+        "L.Economics": 0.26712920392171446,
+        "H.Electrical engineering": 0.053770711564915905,
+        "C.Genetics": 0.08931575645252882,
+        "Q.Linguistics": 0.057095977143261416,
+        "F.Mathematical physics": 0.07930580491107293,
+        "H.Mechanical engineering": 0.063583370509147,
+        "A.Medicine": 0.07230901915843138,
+        "F.Physical chemistry": 0.08577396090016423,
+        "F.Physics": 0.13622143916282392,
+        "B.physiology": 0.0950001752945531,
+        "C.Psychology": 0.24345134320209202,
+        "L.Sociology": 0.202907823446177
+    }
+}, {
+    "name": "H.Mechanical engineering",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.09887558649449135,
+        "H.Civil engineering": 0.47143270910347757,
+        "H.Electrical engineering": 0.27200343933546534,
+        "G.Mathematics": 0.063583370509147,
+        "I.Computer science": 0.1076001603705734,
+        "L.Economics": 0.43006597628263743,
+        "F.Materials science": 0.1261543973726633,
+        "F.Physics": 0.27837918986902394
+    }
+}, {
+    "name": "H.Mechanics",
+    "size": 1,
+    "imports": {
+        "F.Chemistry": 0.05782485359335366,
+        "F.Geology": 0.05891529618209077,
+        "B.Pathology": 0.07236098957876433,
+        "B.physiology": 0.06796722461189642
+    }
+}, {
+    "name": "F.Medical physics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "F.Medicinal chemistry",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.15068595290327017,
+        "B.Pharmacology": 0.18951003813707668
+    }
+}, {
+    "name": "A.Medicine",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.22002791234536834,
+        "C.Biology": 0.5432368924307417,
+        "J.Biotechnology": 0.13731368072224379,
+        "C.Cell biology": 0.1451276884280478,
+        "I.Computer science": 0.07175343756153706,
+        "C.Ecology": 0.4470136271171405,
+        "L.Economics": 0.14758713265690382,
+        "C.Genetics": 0.24653091755569867,
+        "C.Human genetics": 0.13651179138829891,
+        "C.Immunology": 0.13973808261172022,
+        "Q.Linguistics": 0.7048190811264857,
+        "G.Mathematics": 0.07230901915843138,
+        "H.Bioengineering": 0.18605446082913318,
+        "A.Clinical medicine": 0.071274336997485,
+        "C.Genetic engineering": 0.19110472413340424,
+        "C.Microbiology": 0.3908455922256573,
+        "B.Neuroscience": 0.09944399630465525,
+        "B.Pharmacology": 0.2472873508073902,
+        "F.Physics": 0.16190677606435042,
+        "C.Psychology": 0.15290845687046933,
+        "B.Radiology": 0.20350215728971346,
+        "L.Sociology": 0.2140029752491351
+    }
+}, {
+    "name": "V.Mental philosophy",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "V.Metaphysics",
+    "size": 1,
+    "imports": {
+        "F.Chemistry": 0.0531782480580813,
+        "W.Philosophy": 0.07484173016181751
+    }
+}, {
+    "name": "C.Microbiology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 2.3588592610734076,
+        "C.Biology": 1.4328897693068792,
+        "J.Biotechnology": 0.6862059716872421,
+        "C.Cell biology": 0.9859156532242582,
+        "C.Ecology": 4.991449527508251,
+        "D.Food science": 0.5620474184847928,
+        "C.Genetics": 1.1345775051496236,
+        "C.Immunology": 1.9794894695650702,
+        "A.Medicine": 0.3908455922256573,
+        "C.Genetic engineering": 0.7625474715763078,
+        "C.Molecular genetics": 0.5983190081852533,
+        "B.Pharmacology": 2.102122403304487,
+        "C.Virology": 1.3996679979485385,
+        "C.Molecular biology": 0.8834808048904277,
+        "F.Physics": 0.43806691220753424
+    }
+}, {
+    "name": "L.Microeconomics",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.1995455440730171,
+        "L.Macroeconomics": 6.743024298664485,
+        "L.Econometrics": 4.005601438706817
+    }
+}, {
+    "name": "C.Molecular genetics",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.21802481232113805,
+        "C.Biology": 0.13455595606654394,
+        "J.Biotechnology": 3.985575881439976,
+        "C.Cell biology": 0.7223608755365416,
+        "C.Genetics": 0.22643659962711177,
+        "C.Immunology": 0.7961731161125409,
+        "C.Microbiology": 0.5983190081852533,
+        "C.Genetic engineering": 1.4672472835838237,
+        "C.Genomics": 0.26301495356021143,
+        "B.Neuroscience": 1.9675319854791342,
+        "C.Molecular biology": 2.2127908298007055
+    }
+}, {
+    "name": "V.Moral philosophy",
+    "size": 1,
+    "imports": {
+        "C.Psychology": 0.056569925048004774
+    }
+}, {
+    "name": "I.Neural computing",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "B.Neuroscience",
+    "size": 1,
+    "imports": {
+        "I.Artificial intelligence": 1.8638543159719816,
+        "C.biochemistry": 0.13370917738889465,
+        "C.Biology": 0.11628362627370672,
+        "I.Computer science": 0.5501688538603424,
+        "C.Genetics": 0.10692917797224302,
+        "C.Immunology": 0.6928420075865717,
+        "Q.Linguistics": 0.2267521610157585,
+        "A.Medicine": 0.09944399630465525,
+        "C.Molecular genetics": 1.9675319854791342,
+        "B.Pharmacology": 0.3234726166090141,
+        "C.Psychology": 0.05005055804480841,
+        "C.Molecular biology": 3.0401132773149
+    }
+}, {
+    "name": "G.Numerical analysis",
+    "size": 1,
+    "imports": {
+        "I.Computer science": 0.4060412766816466
+    }
+}, {
+    "name": "F.Optical physics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "F.Organic chemistry",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.050901777812398186,
+        "C.Biology": 0.060573938962211325,
+        "F.Chemistry": 0.07953340489237087,
+        "F.Inorganic chemistry": 0.06710211979130197,
+        "F.Physical chemistry": 0.10008664006943724,
+        "F.Physics": 0.06446447823739353,
+        "B.physiology": 0.06851733480784258
+    }
+}, {
+    "name": "D.Organic farming",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "B.Pathology",
+    "size": 1,
+    "imports": {
+        "F.Chemistry": 0.06632760856136931,
+        "H.Mechanics": 0.07236098957876433,
+        "B.physiology": 0.07388683808105782
+    }
+}, {
+    "name": "B.Pharmacology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.7314616032135381,
+        "C.Biology": 0.7120076556308739,
+        "J.Biotechnology": 0.5769163482048686,
+        "C.Cell biology": 0.36672635707272555,
+        "A.Clinical medicine": 0.13632056979743484,
+        "C.Genetics": 0.22969322874705955,
+        "C.Immunology": 1.458345150866362,
+        "F.Medicinal chemistry": 0.18951003813707668,
+        "A.Medicine": 0.2472873508073902,
+        "C.Microbiology": 2.102122403304487,
+        "B.Neuroscience": 0.3234726166090141,
+        "C.Psychology": 0.24740196359105138,
+        "C.Molecular biology": 0.5462534781364167,
+        "F.Physics": 0.3061558705509798
+    }
+}, {
+    "name": "W.Philosophy",
+    "size": 1,
+    "imports": {
+        "V.Metaphysics": 0.07484173016181751,
+        "B.physiology": 0.06564435615075176
+    }
+}, {
+    "name": "F.Physical chemistry",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.25967910249808956,
+        "C.Biology": 0.1187310510335017,
+        "F.Inorganic chemistry": 0.056000972972468255,
+        "G.Mathematics": 0.08577396090016423,
+        "F.Organic chemistry": 0.10008664006943724,
+        "F.Mathematical physics": 0.07856122067497989,
+        "F.Physics": 0.13131782902245068
+    }
+}, {
+    "name": "F.Physical geography",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "F.Physics",
+    "size": 1,
+    "imports": {
+        "H.Acoustics": 0.10330726592934442,
+        "D.Agriculture": 0.09256697881916236,
+        "F.Astrophysics": 0.18544003992463487,
+        "C.biochemistry": 0.5547378899784401,
+        "C.Biology": 0.301032808109318,
+        "H.Civil engineering": 0.22909235682372564,
+        "I.Computer science": 0.07894432793876038,
+        "F.Earth science": 0.09452712250596047,
+        "C.Ecology": 0.14712957578753946,
+        "L.Economics": 0.36607157347170827,
+        "H.Electrical engineering": 0.1697129320682533,
+        "C.Genetics": 0.1870305223242155,
+        "F.Inorganic chemistry": 0.05328434849098568,
+        "Q.Linguistics": 0.23459557117788574,
+        "F.Materials science": 0.07785875314514974,
+        "G.Mathematics": 0.13622143916282392,
+        "H.Mechanical engineering": 0.27837918986902394,
+        "A.Medicine": 0.16190677606435042,
+        "F.Organic chemistry": 0.06446447823739353,
+        "F.Physical chemistry": 0.13131782902245068,
+        "I.Artificial intelligence": 0.06519944046774412,
+        "J.Biotechnology": 0.06527761484150722,
+        "F.Climatology": 0.14926781762945013,
+        "H.Electronic engineering": 0.0716871185361793,
+        "C.Genetic engineering": 0.05937544305084875,
+        "F.Mathematical physics": 0.07919881769924003,
+        "C.Microbiology": 0.43806691220753424,
+        "B.Pharmacology": 0.3061558705509798,
+        "B.physiology": 0.08542841903668139,
+        "C.Psychology": 0.16279167399561467,
+        "B.Radiology": 0.2082669122131944,
+        "L.Sociology": 0.29244758167533497,
+        "C.Molecular biology": 0.0951100100312437
+    }
+}, {
+    "name": "B.physiology",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.06553235467236541,
+        "C.biochemistry": 0.05784108081725409,
+        "C.Biology": 0.06124250510863079,
+        "F.Chemistry": 0.2082558990812256,
+        "L.Economics": 0.050464074255836176,
+        "F.Geology": 0.09396521877747796,
+        "G.Mathematics": 0.0950001752945531,
+        "H.Mechanics": 0.06796722461189642,
+        "F.Organic chemistry": 0.06851733480784258,
+        "B.Pathology": 0.07388683808105782,
+        "W.Philosophy": 0.06564435615075176,
+        "F.Physics": 0.08542841903668139,
+        "C.Psychology": 0.0690488807639765,
+        "L.Sociology": 0.08109120169609875
+    }
+}, {
+    "name": "L.Political economics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "L.Political sociology",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.3335644592931814,
+        "C.Psychology": 0.07744018134916113,
+        "L.Sociology": 0.40141799822969676
+    }
+}, {
+    "name": "M.Private law",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "C.Psychology",
+    "size": 1,
+    "imports": {
+        "H.Acoustics": 0.07631823338377658,
+        "D.Agriculture": 0.4136114152185719,
+        "I.Artificial intelligence": 0.0509131523209184,
+        "C.biochemistry": 0.1819587434627711,
+        "C.Biology": 0.9323056390400016,
+        "A.Clinical medicine": 0.06789929656493338,
+        "I.Computer science": 0.06364336541424634,
+        "C.Ecology": 0.6450485346788559,
+        "L.Economics": 1.3054160090940783,
+        "H.Electrical engineering": 0.13938022588712481,
+        "C.Genetics": 0.47618236426234545,
+        "G.Mathematics": 0.24345134320209202,
+        "A.Medicine": 0.15290845687046933,
+        "V.Moral philosophy": 0.056569925048004774,
+        "B.Neuroscience": 0.05005055804480841,
+        "B.Pharmacology": 0.24740196359105138,
+        "F.Physics": 0.16279167399561467,
+        "B.physiology": 0.0690488807639765,
+        "L.Political sociology": 0.07744018134916113,
+        "Q.Applied linguistics": 0.056397408308951215,
+        "L.International relations": 0.14958773628562616,
+        "Q.Linguistics": 0.167076686828315,
+        "V.Social philosophy": 0.13076260170373968,
+        "L.Social theory": 0.328161284532721,
+        "Q.Sociolinguistics": 0.10645827004490435,
+        "L.Sociology": 0.38040797989098485
+    }
+}, {
+    "name": "M.Public law",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "G.Pure mathematics",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "B.Radiology",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.5690506360269866,
+        "A.Medicine": 0.20350215728971346,
+        "F.Physics": 0.2082669122131944
+    }
+}, {
+    "name": "V.Scholastic philosophy",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "V.Social philosophy",
+    "size": 1,
+    "imports": {
+        "L.Economics": 0.09459375151894907,
+        "C.Psychology": 0.13076260170373968,
+        "L.Sociology": 0.12962271764094446,
+        "L.Social theory": 0.0536375710878044
+    }
+}, {
+    "name": "L.Social theory",
+    "size": 1,
+    "imports": {
+        "C.Biology": 0.4954409731757622,
+        "C.Ecology": 2.5568444302716626,
+        "L.Economics": 1.2692010609593602,
+        "Q.Linguistics": 0.5301881400667837,
+        "C.Psychology": 0.328161284532721,
+        "L.International relations": 0.057866901783468504,
+        "V.Social philosophy": 0.0536375710878044,
+        "L.Sociology": 0.47426506337123114,
+        "Q.Sociolinguistics": 0.6969826824696708
+    }
+}, {
+    "name": "Q.Sociolinguistics",
+    "size": 1,
+    "imports": {
+        "Q.Applied linguistics": 0.2914473685551943,
+        "Q.Historical linguistics": 0.7153795125602314,
+        "Q.Linguistics": 1.5688503172095052,
+        "C.Psychology": 0.10645827004490435,
+        "L.Social theory": 0.6969826824696708,
+        "L.Sociology": 0.18454098372275254
+    }
+}, {
+    "name": "L.Sociology",
+    "size": 1,
+    "imports": {
+        "D.Agriculture": 0.21257020390793413,
+        "F.Astronomy": 0.05568404581461534,
+        "C.Biology": 1.6063339671616632,
+        "I.Computer science": 0.09061510078955727,
+        "C.Ecology": 0.9664115075616868,
+        "L.Economics": 3.3819911435087358,
+        "C.Genetics": 1.0186120394342846,
+        "L.International relations": 0.18402706224995807,
+        "Q.Linguistics": 0.7493544781344964,
+        "G.Mathematics": 0.202907823446177,
+        "A.Medicine": 0.2140029752491351,
+        "F.Physics": 0.29244758167533497,
+        "B.physiology": 0.08109120169609875,
+        "L.Political sociology": 0.40141799822969676,
+        "C.Psychology": 0.38040797989098485,
+        "V.Social philosophy": 0.12962271764094446,
+        "L.Social theory": 0.47426506337123114,
+        "Q.Sociolinguistics": 0.18454098372275254,
+        "L.Applied sociology": 0.058974332285581674,
+        "I.Artificial intelligence": 0.05842374246320513
+    }
+}, {
+    "name": "F.Structural chemistry",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "H.Structural engineering",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "H.Transport engineering",
+    "size": 1,
+    "imports": {}
+}, {
+    "name": "C.Virology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 1.057459737542195,
+        "C.Biology": 0.18245794363702017,
+        "C.Cell biology": 0.4762547177285129,
+        "C.Genetics": 0.24521253091270276,
+        "C.Immunology": 1.1076327703836915,
+        "C.Microbiology": 1.3996679979485385,
+        "C.Molecular biology": 0.7467377075300363
+    }
+}, {
+    "name": "C.Molecular biology",
+    "size": 1,
+    "imports": {
+        "C.biochemistry": 0.2717198121949156,
+        "J.Biotechnology": 2.262928770153423,
+        "C.Cell biology": 1.1092608457573512,
+        "I.Computer science": 0.6435139606270665,
+        "C.Ecology": 1.086495428949054,
+        "C.Genetic engineering": 1.2552138755659794,
+        "C.Genetics": 0.27581141715960283,
+        "C.Genomics": 0.2530408649148082,
+        "C.Human genetics": 0.20613254206974674,
+        "C.Immunology": 1.2786976537167656,
+        "C.Microbiology": 0.8834808048904277,
+        "C.Molecular genetics": 2.2127908298007055,
+        "B.Neuroscience": 3.0401132773149,
+        "B.Pharmacology": 0.5462534781364167,
+        "F.Physics": 0.0951100100312437,
+        "C.Virology": 0.7467377075300363
+    }
+}]
