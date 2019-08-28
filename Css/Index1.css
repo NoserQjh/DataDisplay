@@ -1,0 +1,23 @@
+#ImageIndex{
+    position:fixed;
+    top:140px;
+    right: 0%;
+    background-color:#EEE;
+}
+.IndexButton{
+    margin-top:25%;
+    color:#444;
+    background-color: #EEE;
+    border:0px;
+    outline:none;
+    font-size: 20px;
+    font-family: RuiyunXiyuan
+}
+button.IndexButton:hover {
+    cursor: pointer;
+}
+#IndexButtonImage1{
+    color:#000;
+    font-weight: bold;
+    font-size: 20px;
+}
