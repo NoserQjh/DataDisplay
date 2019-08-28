@@ -2,7 +2,7 @@
  * @Author: NoserQJH
  * @LastEditors: NoserQJH
  * @Date: 2019-06-26 20:10:10
- * @LastEditTime: 2019-08-28 11:04:39
+ * @LastEditTime: 2019-08-28 19:08:05
  * @Description:
  -->
 <!DOCTYPE html>
@@ -15,6 +15,7 @@
     <script src="Js\Jquery\jquery-3.4.1.min.js"></script>
     <script src="Js\Echart\dataTool.min.js"></script>
     <link rel="stylesheet" href="Css/IndexStyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="Css/ImageIndex.css" media="screen" type="text/css" />
     <title>数据展示</title>
 </head>
 
@@ -32,7 +33,7 @@
             <a class="unselected_index" href="./Index4.html">其他学科影响</a>
         </div>
     </div>
-    <div id="Datas">
+    <div id="Datas" style="width: 85%">
         <div id="Blank" style="width: 100%;height:150px;">
         </div>
         <div id="NumberOfPublication" style="width: 100%;height:750px;">
@@ -45,6 +46,23 @@
         </div>
         <div id="MolecularBiologyRelatedIst" style="width: 100%;height:750px;">
         </div>
+    </div>
+    <div id="ImageIndex" style="width: 15%;height:100%">
+        <button class="IndexButton" id="IndexButtonNumberOfPublication" style="width: 100%;height:50px;">
+            Number of publication
+        </button>
+        <button class="IndexButton" id="IndexButtonFameOfFamousMathmaticians" style="width: 100%;height:50px;">
+            Fame of famous mathmaticians
+        </button>
+        <button class="IndexButton" id="IndexButtonFoundersOfMolecularBiology" style="width: 100%;height:50px;">
+            Founders of Molecular biology
+        </button>
+        <button class="IndexButton" id="IndexButtonNameOfMolecularBiology" style="width: 100%;height:50px;">
+            Name of Molecular biology
+        </button>
+        <button class="IndexButton" id="IndexButtonMolecularBiologyRelatedIst" style="width: 100%;height:50px;">
+            Molecular biology related -ist
+        </button>
     </div>
 </body>
 <script src="Js\Index2.js"></script>

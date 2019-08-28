@@ -2,7 +2,7 @@
  * @Author: NoserQJH
  * @LastEditors: NoserQJH
  * @Date: 2019-08-26 16:34:32
- * @LastEditTime: 2019-08-28 11:04:55
+ * @LastEditTime: 2019-08-28 19:18:46
  * @Description:
  -->
 <!DOCTYPE html>
@@ -13,6 +13,7 @@
     <!-- 引入 ECharts 文件 -->
     <script src="//cdn.wordart.com/wordart.min.js" async defer></script>
     <link rel="stylesheet" href="Css/IndexStyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="Css/ImageIndex.css" media="screen" type="text/css" />
     <title>数据展示</title>
 </head>
 
@@ -30,15 +31,38 @@
             <a class="unselected_index" href="./Index4.html">其他学科影响</a>
         </div>
     </div>
-    <div id="Blank" style="width: 1000px;height:150px;">
+    <div id="Blank" style="width: 100%;height:150px;">
     </div>
-    <img src="./Img/fig (3)(1).svg" style="display:block;width:1000px" />
-    <img src="./Img/ns (1)(1).svg" style="display:block;width:1000px" />
-    <img src="./Img/Word Art2.svg" style="display:block;width:500px" />
-    <img src="./Img/Word Art1.svg" style="display:block;width:500px" />
-    <img src="./Img/topic(2).svg" style="display:block;width:1000px" />
-    <img src="./Img/doc(1).png" style="display:block;width:1000px" />
-    <img src="./Img/微信图片_20190827194112.jpg" style="display:block;width:1000px" />
+    <div id="Images" style="width: 80%;">
+        <img src="./Img/index1_1.svg" style="display:block;width:100%;height:750px;" />
+        <img src="./Img/index1_2.svg" style="display:block;width:100%;height:750px;" />
+        <img src="./Img/index1_3.svg" style="display:block;width:50%;height:750px;float:left;" />
+        <img src="./Img/index1_4.svg" style="display:block;width:50%;height:750px;" />
+        <img src="./Img/index1_5.svg" style="display:block;width:100%;height:750px;" />
+        <img src="./Img/index1_6.png" style="display:block;height:750px;margin: 0 auto;" />
+        <img src="./Img/index1_7.jpg" style="display:block;height:750px;margin: 0 auto;" />
+    </div>
+    <div id="ImageIndex" style="width: 15%;height:100%">
+        <button class="IndexButton" id="IndexButtonImage1" style="width: 100%;height:50px;">
+            Image1
+        </button>
+        <button class="IndexButton" id="IndexButtonImage2" style="width: 100%;height:50px;">
+            Image2
+        </button>
+        <button class="IndexButton" id="IndexButtonImage3&4" style="width: 100%;height:50px;">
+            Image3&4
+        </button>
+        <button class="IndexButton" id="IndexButtonImage5" style="width: 100%;height:50px;">
+            Image5
+        </button>
+        <button class="IndexButton" id="IndexButtonImage6" style="width: 100%;height:50px;">
+            Image6
+        </button>
+        <button class="IndexButton" id="IndexButtonImage7" style="width: 100%;height:50px;">
+            Image7
+        </button>
+    </div>
 </body>
+<script src="Js\Index1.js"></script>
 
 </html>
